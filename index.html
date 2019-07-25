@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Treo Labs</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/all.css">
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <a href="./index.html">
+            <span>Treo</span>Labs
+        </a>
+    </div>
+    <div class="user">
+        <div class="name"><span>Hi</span><span id="username"></span></div>
+        <i class="fas fa-sign-out-alt" onclick="Api.logout()"></i>
+    </div>
+</div>
+<a href="./basket.html" class="basket hide" id="basket">
+    <div class="icon">
+        <i class="fas fa-shopping-basket"></i>
+        <div class="count">0</div>
+    </div>
+</a>
+<div class="wrap">
+    <div class="sidebar">
+        <h4>Price:</h4>
+        <form method="get" class="sort-from" id="filter">
+            <input type="number" name="minp" id="minp" placeholder="min">
+            <input type="number" name="maxp" id="maxp" placeholder="max">
+            <button type="submit">Filter</button>
+        </form>
+        <h4>Sort:</h4>
+        <form class="sort-from" method="get" id="sort">
+            <button name="sort" value="name_high">Name <i class="fas fa-chevron-down"></i></button>
+            <button name="sort" value="name_low">Name <i class="fas fa-chevron-up"></i></i></button>
+            <button name="sort" value="price_high">Price <i class="fas fa-chevron-down"></i></button>
+            <button name="sort" value="price_low">Price <i class="fas fa-chevron-up"></i></button>
+        </form>
+        <a href="./index.html" class="clear-filters">
+            <button>Clear filters</button>
+        </a>
+    </div>
+    <div class="content">
+        <div class="items" id="itemsContainer">
+        </div>
+        <div class="pagination" id="pagination">
+        </div>
+    </div>
+</div>
+<script src="./js/store.js"></script>
+<script src="./js/api.js"></script>
+<script src="./js/event.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/home.js"></script>
+</body>
+</html>

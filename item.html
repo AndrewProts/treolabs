@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Treo Labs</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/all.css">
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <a href="./index.html">
+            <span>Treo</span>Labs
+        </a>
+    </div>
+    <div class="user">
+        <div class="name"><span>Hi</span><span id="username"></span></div>
+        <i class="fas fa-sign-out-alt" onclick="Api.logout()"></i>
+    </div>
+</div>
+<a href="./basket.html" class="basket hide" id="basket">
+    <div class="icon">
+        <i class="fas fa-shopping-basket"></i>
+        <div class="count">0</div>
+    </div>
+</a>
+<div class="item-page">
+    <div class="row">
+        <div class="img" id="image">
+
+        </div>
+        <div class="right">
+            <div class="row vertical">
+                <div class="name" id="name"></div>
+                <div class="id" id="id"></div>
+                <div class="price" id="price"></div>
+            </div>
+            <button id="buy"></button>
+        </div>
+    </div>
+    <div class="row description" id="description">
+
+    </div>
+</div>
+<script src="./js/store.js"></script>
+<script src="./js/api.js"></script>
+<script src="./js/event.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/item.js"></script>
+</body>
+</html>
